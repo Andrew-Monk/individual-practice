@@ -1,11 +1,27 @@
 # Make your own calculator using the terminal and inputs and have it calculate for you
 # similar to when asking AI to do math for you.
+num_of_int = 0
+reply = None
+operator = None
+total = 0
 
 while True:
-    # opening questions
+    while True:
+        try:
+            # Opening questions
+            print("Hello, I am your personal calculator, how many numbers would you like to enter?")
+            num = int(input())
+            # using isinstance() to check if num is interger
+            if not isinstance(num, int):
+                raise ValueError('Please enter a number')
+            # adding num to num_of_int to access later
+            else:
+                num_of_int += num
 
-    print("Hello, I am your personal calculator, how many numbers would you like to enter?")
-    num_of_int = int(input())
+            break
+
+        except ValueError as e:
+            print('Error:', e)
 
     while True:
         try:
@@ -16,8 +32,8 @@ while True:
 
             break
 
-        except ValueError:
-            print("Error:", ValueError)
+        except ValueError as e:
+            print('Error:', e)
 
     while True:
         # Begin mathematical functions
@@ -29,8 +45,19 @@ while True:
 
             break
 
-        except ValueError:
-            print("Error:", ValueError)
+        except ValueError as e:
+            print("Error:", e)
+    break
+    # while True:
+        # Get numbers
+        # find a way to prompt for the amount of nums to be entered, then add them to the list
+        # use for loop to loop through list and check values to see if theyre intergers
+        # try:
+        #     print
+
+
+
+
 
 # def calculate(response):
 #     if response != type(int()):
