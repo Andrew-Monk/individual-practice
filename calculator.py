@@ -13,7 +13,7 @@ while True:
             num = int(input())
             # using isinstance() to check if num is interger
             if not isinstance(num, int):
-                raise ValueError('Please enter a number')
+                raise ValueError
             # adding num to num_of_int to access later
             else:
                 num_of_int += num
@@ -22,18 +22,20 @@ while True:
 
         except ValueError as e:
             print('Error:', e)
+            print('Please enter a valid number.')
 
     while True:
         try:
             print('I see you entered', num_of_int, 'is this correct? Please reply with Y or N' )
             reply = str(input()).lower()
             if reply not in ["y", "n"]:
-                raise ValueError("Please enter Y or N")
+                raise ValueError
 
             break
 
         except ValueError as e:
             print('Error:', e)
+            print("Please enter Y or N")
 
     while True:
         # Begin mathematical functions
@@ -41,12 +43,13 @@ while True:
             print('What would you like to do with these numbers? add, subract, multiply or divide?')
             operator = str(input()).lower()
             if operator not in ["add", "subtract", "multiply", "divide"]:
-                raise ValueError('Please enter the value add, subtract, multiply, or divide')
+                raise ValueError
 
             break
 
         except ValueError as e:
             print("Error:", e)
+            print('Please enter the value add, subtract, multiply, or divide')
     break
     # while True:
         # Get numbers
