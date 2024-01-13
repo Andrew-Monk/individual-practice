@@ -3,6 +3,7 @@
 num_of_int = 0
 answer = ''
 method = ''
+nums_list = []
 total = 0
 
 while True:
@@ -53,11 +54,36 @@ while True:
         except ValueError as e:
             print("Error:", e)
             print('Please enter the value: add, subtract, multiply, or divide')
+        break
+
+    while True:
+        try:
+            for i in range(num_of_int):
+                print("Please enter your number")
+                num = int(input())
+                nums_list.append(num)
+
+            if method == 'add':
+                total += sum(nums_list)
+                print("The sum of your numbers is", total)
+
+            if method == 'subtract':
+                for i in nums_list:
+                    total -= i
+                    print("The difference of your numbers is", total)
+
+            if method == 'multiply':
+                for i in nums_list:
+                    total *= i
+                    print("The product of your numbers is", total)
+
+            if method == 'divide':
+                for i in nums_list:
+                    total /= i
+                    print("The quotient of your numbers is", total)
+
+            break
+
+        except ValueError:
+            raise ValueError
     break
-    # while True:
-        # Get numbers
-        # find a way to prompt for the amount of nums to be entered, then add them to the list
-        # maybe use a for loop and range to prompt everytime it loops?
-        # use for loop to loop through list and check values to see if theyre intergers
-        # try:
-        #     print
