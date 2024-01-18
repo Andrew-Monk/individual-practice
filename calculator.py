@@ -70,17 +70,18 @@ while True:
             if method == 'subtract':
                 for i in nums_list:
                     total -= i
-                    print("The difference of your numbers is", total)
+                print("The difference of your numbers is", total)
 
             if method == 'multiply':
+                result = 1
                 for i in nums_list:
-                    total *= i
-                    print("The product of your numbers is", total)
+                    result *= i
+                print("The product of your numbers is", result)
 
             if method == 'divide':
                 for i in nums_list:
                     total /= i
-                    print("The quotient of your numbers is", total)
+                print("The quotient of your numbers is", total)
 
             break
 
