@@ -32,6 +32,8 @@ while True:
             reply = str(input()).lower()
             if reply not in ["y", "n"]:
                 raise ValueError
+            # if reply == 'n':
+            # create logic for no answer here:
             answer += reply
 
             break
@@ -79,9 +81,11 @@ while True:
                 print("The product of your numbers is", result)
 
             if method == 'divide':
+                # re work to add a divisor input to divide the list by..
+                result = 1
                 for i in nums_list:
-                    total /= i
-                print("The quotient of your numbers is", total)
+                    result = i / result
+                print("The quotient of your numbers is", result)
 
             break
 
